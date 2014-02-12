@@ -7,7 +7,8 @@ Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		node2|Any CPU = node2|Any CPU
-		node1|Any CPU = node1|Any CPU		Release|Any CPU = Release|Any CPU
+		node1|Any CPU = node1|Any CPU		
+		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{77E29241-37AA-49AE-BC2C-35529CF2E7E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
