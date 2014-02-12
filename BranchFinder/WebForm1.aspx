@@ -11,6 +11,7 @@
     <div>
         <asp:Button ID="Button1" runat="server" Text="Button" onclick="Button1_Click" />
         <div>from note 1</div>
+        <div>this is note2</div>
     </div>
     </form>
 </body>
