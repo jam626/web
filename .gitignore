@@ -4,6 +4,7 @@ SLing/App_Data/
 SLing/media/
 .vs/
 SLing/Umbraco*/
+SLing/.sass-cache/
 
 
 SLing.suo
