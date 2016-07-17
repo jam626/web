@@ -1,0 +1,50 @@
+
+@include font-face("OpenSansRegular",
+            font-files(
+                        font-url("open-sans/OpenSans-Regular-webfont.woff",woff)),
+                        "OpenSans-Regular-webfont.woff",normal, normal);
+@include font-face("OpenSansBold",
+            font-files(
+                        font-url("open-sans/OpenSans-Bold-webfont.woff",woff)),
+                        "OpenSans-Bold-webfont.woff",normal, normal);
+@include font-face("OpenSansCondensedLight",
+            font-files(
+                        font-url("open-sans/OpenSans-CondLight-webfont.woff",woff)),
+                        "OpenSans-CondLight-webfont.woff",normal, normal);
+
+body{
+    font-size:63%;
+    font-family:"OpenSansRegular", Arial, Helvetica, sans-serif;
+    color:white;
+}
+
+.left{
+    float:left;
+    text-align:left;
+}
+.right{
+    float:right;
+    text-align:right;
+}
+
+a{
+    cursor:pointer;
+    text-decoration:none;
+    color:white;
+}
+a:link,a:visited{
+    @extend a;
+    transition: all 0.3s linear;
+}
+%bcolor1{
+    background-color:#9E0B0F;
+}
+%bcolor2{
+    background-color:#FCAF17;
+}
+%color1{
+    color: #FCAF17;
+}
+%color2{
+    color: #9E0B0F;
+}

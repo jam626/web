@@ -1,0 +1,45 @@
+$desktop-width : 1083px;
+$tablap-l-width : 914px;
+$tablap-p-width : 746px;
+$mobile-width : 533px;
+
+$desktop-breakpoint : 988px;
+$tablap-l-breakpoint : 820px;
+$tablap-p-breakpoint : 652px;
+$mobile-l-breakpoint : 400px;
+$mobile-p-breakpoint : 232px;
+@mixin cus-container
+{
+
+   @include container($desktop-breakpoint);
+
+   @media only screen and (max-width:$desktop-width - 1) and (min-width:$tablap-l-width){
+       @include container($tablap-l-breakpoint);
+   }
+   @media only screen and (max-width:$tablap-l-width - 1) and (min-width:$tablap-p-width){
+       @include container($tablap-p-breakpoint);
+   }
+   @media only screen and (max-width:$tablap-p-width - 1) and (min-width:$mobile-width + 1){
+       @include container($mobile-l-breakpoint);
+   }
+   @media only screen and (max-width:$mobile-width){
+       @include container($mobile-p-breakpoint);
+   }
+}
+@mixin tablab-container
+{
+    $blueprint-container-size: 652px;
+    @include container;
+}
+@mixin mobile-l-container
+{
+    $blueprint-container-size: 400px;
+
+    @include container;
+    width:$blueprint-container-size;
+}
+@mixin mobile-p-container
+{
+    $blueprint-container-size: 232px;
+    @include container;
+}

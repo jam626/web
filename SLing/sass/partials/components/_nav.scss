@@ -1,0 +1,165 @@
+%nav-li {
+    border-bottom: 5px solid transparent;
+    @include single-text-shadow(1px, 1px, 3px, rgba(0,0,0,0.5));
+    @include single-transition(border, 0.3s, linear,0s);
+
+    &:hover {
+        border-color: #FCAF17;
+    }
+}
+
+%nav-bg{
+    height: 55px;
+    background: image-url("bg-menu.png") left bottom repeat-x;
+}
+
+%sub-menu-li{
+     font-size: 0.85em;
+     line-height:normal;
+    text-transform: none;
+    height: auto;
+     @include single-text-shadow(none);
+    a{
+                @extend %color2;
+                display: block;
+                float: none;
+                padding: 10px 20px;
+                border-bottom: 1px solid rgba(0,0,0,0.1);
+
+            }
+                    &:hover {
+
+                >a {
+                    @extend %bcolor2;
+                    color: white;
+                }
+    }
+}
+.navigation {
+    position: relative;
+    text-transform: uppercase;
+    @extend %nav-bg;
+    width: 100%;
+    
+    font-family: "OpenSansCondensedLight";
+
+    .sub-menu {
+        opacity: 0;
+        position: absolute;
+        left: 0;
+        top: -9999px;
+        height: auto;
+       
+        li {
+            @extend %sub-menu-li;
+            
+            width: 200px;
+            border-bottom: none;
+            
+           
+        }
+    }
+
+    @media only screen and (max-width:$tablap-p-width) {
+        display: none;
+    }
+
+
+    li {
+        display: inline-block;
+        position: relative;
+        height: 50px;
+        font-size: 1.9em;
+
+        @media only screen and (max-width:1082px) and (min-width:914px) {
+            font-size: 1.7em;
+        }
+
+        @media only screen and (max-width:913px) and (min-width:746px) {
+            font-size: 1.5em;
+        }
+
+        font-weight: 900;
+        @extend %nav-li;
+
+        &.current-menu-item a {
+            @extend %color1;
+        }
+
+        a {
+            display: block;
+            float: left;
+            padding: 13px 15px 19px;
+
+            @media only screen and (max-width:913px) and (min-width:746px) {
+                padding: 13px 7px 19px;
+            }
+
+            &:hover {
+                @extend %color1;
+            }
+        }
+
+        &:hover {
+            .sub-menu {
+                opacity: 1;
+                top: 55px;
+            }
+        }
+    }
+}
+
+.navigation-mobile {
+    display: none;
+    font-family: "OpenSansCondensedLight";
+    @extend %nav-bg;
+    @media only screen and (max-width:$tablap-p-width) {
+        display: block;
+    }
+
+    .navigation-mobile-container {
+
+        @include cus-container;
+
+        .select {
+            @extend %nav-li;
+            font-size: 1.9em;
+            text-transform: uppercase;
+            height:50px;
+            a {
+                display: block;
+                padding: 16px 20px 20px;
+            }
+
+            &:hover {
+                @extend %color1;
+            }
+        }
+
+        .menu {
+            display: none;
+          
+            li{
+                @extend %sub-menu-li;
+                
+                a{
+                    text-align:left;
+                    background-color:white;
+                    padding:10px 20px;
+                }
+            }
+            .sub-menu{
+
+              li{
+                   @extend %sub-menu-li;
+                   
+                 a{ 
+                     text-align:left;
+                      background-color: #f0f0f0;
+                        padding: 10px 20px 10px 40px;
+                }
+              }
+            }
+        }
+    }
+}
