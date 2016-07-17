@@ -1,3 +1,9 @@
-BranchFinder/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+SLing/obj/
+SLing/bin/
+SLing/App_Data/
+SLing/media/
+.vs/
+SLing/Umbraco*/
 
-BranchFinder.suo
+
+SLing.suo

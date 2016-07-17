@@ -1,0 +1,85 @@
+﻿@inherits Umbraco.Web.Macros.PartialViewMacroPage
+
+@*
+    Macro to list all child pages under a specific page in the content tree.
+
+    How it works:
+        - Confirm the startNodeId macro parameter has been passed in with a value
+        - Loop through all child pages
+        - Display a list of link to those pages, sorted by the value of the propertyAlias
+
+    Macro Parameters To Create, for this macro to work:
+    Alias:startNodeId     Name:Select starting page    Type:Content Picker
+*@
+@{ var startNodeId = Model.MacroParameters["DataSource"]; }
+@if (startNodeId != null)
+{
+    @* Get the starting page *@
+var startNode = Umbraco.Content(startNodeId);
+var selection = startNode.Children.Where("Visible");
+
+if (selection.Any())
+{
+    <div class="content-home shadow-big-top left">
+        <div class="content-home-container">
+            <div class="callouts left">
+                @{ 
+                    int total = selection.Count();
+                    for (int i = 0; i < total; i++)
+                    {
+                        var item = selection[i];
+                        string titlelink = string.Empty;
+                        string buttonlink = string.Empty;
+                        string last = i == total - 1 ? "last" : string.Empty;
+                    <div class="callout-block @last round shadow left">
+
+                        @if (item.HasValue("Links"))
+                        {
+
+                            var linkitem = item.Links[0];
+
+                            var linkUrl = (bool)linkitem.isInternal ? Umbraco.NiceUrl(linkitem.Value<int>
+                                ("internal")) : linkitem.link;
+                            var linkTarget = (bool)item.newWindow ? "_blank" : null;
+                            <h2 class="callout-title">
+                                <a href="@linkUrl" target="@linkTarget" title="@linkitem.caption">@linkitem.caption</a>
+
+                            </h2><!-- callout-title -->
+                            <div class="callout-image">
+                                <div class="callout-image-container image-overlay image left">
+                                    <a href="@linkUrl" target="@linkTarget" title="@linkitem.caption">
+                                        <img width="316" height="120" class="attachment-callout size-callout wp-post-image" alt="@Umbraco.Media(item.Image).Name" src="@Umbraco.Media(item.Image).umbracoFile">                                                <span style="display: none;"><span style="display: none;"></span></span>
+                                    </a>
+                                </div><!-- callout-image-container -->
+                            </div>
+                        }
+                        <!-- callout-image -->
+                  
+                            <div class="callout-content round-bottom left">
+                              
+                                <div class="callout-content-container">
+                                    @item.Content
+                                    <div class="button-standard button">
+                                        @if (item.HasValue("Links"))
+                                        {
+
+                                            var linkitem = item.Links[1];
+
+                                            var linkUrl = (bool)linkitem.isInternal ? Umbraco.NiceUrl(linkitem.Value<int>
+                                                ("internal")) : linkitem.link;
+                                            var linkTarget = (bool)item.newWindow ? "_blank" : null;
+
+                                            <a href="@linkUrl" target="@linkTarget" title="@linkitem.caption">@linkitem.caption</a>
+                                        }
+                                    </div>
+                                    <br class="clear">
+                                </div><!-- callout-content-container -->
+                            </div><!-- callout-content -->
+                    </div><!-- callout-block -->
+                        }
+                    }
+            </div>
+        </div>
+        </div>
+        }
+        }

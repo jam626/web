@@ -1,0 +1,80 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{ var home = CurrentPage.Site(); }
+@if (home.Children.Any())
+{
+    <nav class="navigation left">
+        <div class="navigation-container">
+
+            <div class="menu-main-menu-container">
+                <ul id="menu-main-menu" class="menu">
+                    <li class="current-menu-item"><a href="@home.Url">@home.Name</a></li>
+
+                    @* For each child page under the home node *@
+                    @foreach (var childPage in home.Children)
+                    {
+                        if (childPage.Children.Any())
+                        {
+
+                            if (childPage.DocumentTypeAlias == "LandingPage")
+                            {
+                                <li class="">
+                                    <a href="@childPage.NAVUrl">@childPage.Name</a>
+
+                                    @childPages(childPage.Children)                                    
+
+                                </li>
+                            }
+                        }
+
+                    }
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <nav class="navigation-mobile left">
+        <div class="navigation-mobile-container">
+            <ul>
+                <li class="select">
+                    <a href="#" onclick="return false;">Select a page</a>
+                    <div class="menu-main-menu-container">
+                        <ul id="menu-main-menu-1" class="menu">
+                            @* For each child page under the home node *@
+                            @foreach (var childPage in home.Children)
+                            {
+                                if (childPage.Children.Any())
+                                {
+
+                                    if (childPage.DocumentTypeAlias == "LandingPage")
+                                    {
+                                        <li class="">
+                                            <a href="@childPage.NAVUrl">@childPage.Name</a>
+
+                                            @childPages(childPage.Children)
+
+                                        </li>
+                                    }
+                                }
+
+                            }
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+            <br class="clear">
+        </div><!-- navigation-container -->
+    </nav>
+}
+    @helper childPages(dynamic pages)
+    {
+if (pages.Any())
+{
+        <ul class="sub-menu">
+            @foreach (var page in pages)
+            {
+                <li>
+                    <a href="@page.Url">@page.Name</a>
+                </li>
+            }
+        </ul>
+}
+}

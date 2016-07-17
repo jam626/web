@@ -1,0 +1,86 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+    Layout = null;
+	var home = @CurrentPage.Site();
+}
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en-US" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en-US" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en-US" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en-US" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html class="no-js" lang="en-US">
+ <!--<![endif]-->
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="author" content="Grand Pixels, www.grandpixels.com" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="/css/supersized.core.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="/css/style.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="/css/responsive.css" type="text/css" media="all" />
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>Singapore Sling | World Famous National Cocktail of Singapore &lsaquo; 100% Original &amp; Freshly Shaken</title>
+</head>
+<body>
+    <header id="top" class="header shadow-big-bottom left">
+        <div class="header-container left">
+
+            <div class="topbar">
+
+                <div class="tagline left">
+                    World Famous National Cocktail of Singapore
+                </div><!-- tagline -->
+
+                <div class="tagline right">
+                    100% Original &amp; Freshly Shaken | <a href="/my-account">
+                        Login
+                    </a>
+                </div>
+
+            </div><!-- topbar -->
+
+            <div class="logo">
+                <div class="logo-image left">
+                    <h1>
+                        <a href="@home.Url" title="Singapore Sling | World Famous National Cocktail of Singapore">
+                            <img src="@home.SiteLogo" alt="Singapore Sling | World Famous National Cocktail of Singapore">
+                        </a>
+                    </h1>
+                </div><!-- logo-image -->
+            </div><!-- logo -->
+
+            @{ Html.RenderPartial("SLNav"); }
+
+            <br class="clear">
+        </div><!-- header-container -->
+    </header>
+    <!-- Hearder-->
+    <div class="canvas">
+       
+        @RenderBody()
+
+        <br class="clear">
+    </div>
+    <!--MainContent-->
+@Umbraco.RenderMacro("SLFooter", new {DataSource="2091"})
+    <ul id="supersized"></ul>
+    <!--Footer-->
+    <!--Overlay-->
+    <!-- Javascripts -->
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/js/jquery.fancybox.pack.js"></script>
+    <script type="text/javascript" src="/js/jquery.easing.min.js"></script>
+    <script type="text/javascript" src="/js/supersized.3.2.7.min.js"></script>
+    <script type="text/javascript" src="/js/supersized.shutter.min.js"></script>
+    <script type="text/javascript" src="/scripts/SLing.js"></script>
+
+</body>
+</html>

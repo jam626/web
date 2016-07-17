@@ -1,0 +1,33 @@
+﻿@inherits Umbraco.Web.Macros.PartialViewMacroPage
+
+@{ var startNodeId = Model.MacroParameters["DataSource"]; }
+@if (startNodeId != null)
+{
+    @* Get the starting page *@
+var startNode = Umbraco.Content(startNodeId);
+var selection = startNode.Children.Where("Visible");
+
+if (selection.Any())
+{
+            <a id="prevslide" class="slideshow-prev load-item" style="display: block;"></a>
+            <a id="nextslide" class="slideshow-next load-item" style="display: block;"></a>
+
+            <div class="slideshow-caption round">
+                                 <div id="slidecaption" class="slideshow-caption-container round-bottom" ></div><!-- slideshow-caption-container -->
+            </div><!-- slideshow-caption -->
+            <div class="slideshow-overlay round"></div><!-- slideshow-overlay -->
+        <script type="text/javascript">
+            var Slingsupersized = new Array();
+            @foreach (var item in selection)
+            {
+                var s = new HtmlString(item.Content.ToString().Replace("\n","").Replace("\r\n", "").Replace("\r", ""));
+                <text>
+
+            Slingsupersized.push({ image: "@Umbraco.Media(item.Image).umbracoFile", title: '@s' });
+            </text>
+
+        }
+
+        </script>
+    }
+}

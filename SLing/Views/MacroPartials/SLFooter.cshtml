@@ -1,0 +1,56 @@
+﻿@inherits Umbraco.Web.Macros.PartialViewMacroPage
+@{
+
+    var DataSource = Umbraco.Content(Model.MacroParameters["DataSource"]);
+}
+@if (DataSource != null && DataSource.Children.Any())
+{
+    <div class="widget-area-footer left">
+        <div class="widget-area-footer-container">
+            @{ 
+                int total =  DataSource.Children.Count();
+                for (int i =0; i<total; i++)
+                {
+                    var item = DataSource.Children[i];
+                    string right = i == total - 1 ? "widget-area-footer-right" : "widget-area-footer-left";
+            <div class="@right widget-area left">
+                <div id="text-3" class="widget-block left widget_text">
+                    <div class="textwidget">
+                        @item.Content
+                        @if (item.HasValue("Links"))
+                        {
+                            foreach (var linkitem in item.Links)
+                            {
+                                var linkUrl = (bool)linkitem.isInternal ? Umbraco.NiceUrl(linkitem.Value<int>("internal")) : linkitem.link;
+                        var linkTarget = (bool)item.newWindow ? "_blank" : null;
+                                <div class="button left large"><a href="@linkUrl" target="@linkTarget" title="@linkitem.caption" style="background-color:#750000; border-color:#750000;">@linkitem.caption</a></div>
+                            }
+
+
+                }
+                    </div>
+                    <br class="clear">
+                </div>
+            </div>
+
+                    }
+                }
+            <br class="clear">
+        </div>
+    </div>
+}
+<footer class="footer left">
+
+    <div class="footer-container">
+        <div class="copyright left">
+            ©2016 <a href="http://www.trueheritagebrew.com/" title="True Heritage Brew Singapore Pte Ltd">True Heritage Brew Singapore Pte Ltd.</a> <!--| Site by <a href="firefish.com">Firefish</a>-->
+        </div>
+        <div class="socials right">
+            <ul class="right">
+                <li class="facebook left"><a href="https://www.facebook.com/THBSling/" title="Facebook"></a></li>
+                <li class="vimeo left"><a href="http://vimeo.com/thbsingaporesling" title="Vimeo"></a></li>
+            </ul>
+        </div>
+        <br class="clear">
+    </div>
+</footer>
