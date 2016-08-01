@@ -1,0 +1,64 @@
+.widget-area-footer{
+    background:image-url("bg-widget-area-footer.png") top left repeat-x;
+    width:100%;
+    text-align:center;
+    @extend %bcolor1;
+}
+.widget-area-footer-container{
+    @include cus-container;
+    
+    .widget-area{
+        @include span(296px);
+        @include gutters(40px);
+        padding:40px 0 20px;
+        &.last{
+            @include span(296px last);
+        }
+        .textwidget{
+            text-align:center;
+            strong{
+                font-family:"OpenSansBold";
+                font-weight:normal;
+            }
+            em{
+                font-style:italic;
+            }
+            h4{
+                font-size:1.5em;
+                padding:10px 0;
+                font-weight:normal;
+            }
+        }
+        .button{
+            text-align:center;
+            a{
+                float:none;
+                @extend %bcolor1;
+                font-size:1.1em;
+                background-image:image-url("bg-button.png");
+                background-position:top left;
+                background-repeat:repeat-x;
+                padding:7px 20px;
+          
+                &:hover{
+                    background-position:left bottom;
+                    @include single-text-shadow(0, 0, 3px, rgba(255,255,255,0.5));
+                }
+            }
+        }
+    }
+}
+.footer{
+
+    background-image:image-url("bg-footer.png");
+    background-position:top left;
+    background-repeat:repeat-x;
+    @extend %bcolor1;
+    .footer-container{
+        padding:40px 0;
+     @include cus-container;
+     .copyright {
+         padding:15px 0;
+     }
+    }
+}
