@@ -1,6 +1,7 @@
 
 @import "compass/reset";
 @import "compass/css3";
+@import "compass/utilities/general";
 @import "grids";
 
 
@@ -9,3 +10,4 @@
 @import "partials/components/header";
 @import "partials/components/nav";
 @import "partials/components/cav";
+@import "partials/components/footer";

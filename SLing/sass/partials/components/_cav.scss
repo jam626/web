@@ -1,35 +1,142 @@
-%slide-button{
+%slide-button {
     position: absolute;
     width: 38px;
     height: 72px;
     top: 550px;
     z-index: 1;
     opacity: 0.6;
-    &:hover{
-    left: 40px;
-    background-image: url("images/arrow-prev.png");
+    display: block;
+    @include single-transition(opacity, 0.3s, linear,0s);
+
+    &:hover {
+        opacity: 1;
     }
 }
-.slideshow-prev{
+
+.slideshow-prev {
     @extend %slide-button;
+    left: 40px;
+    background-image: image-url("arrow-prev.png");
 }
-.slideshow-next{
+
+.slideshow-next {
     @extend %slide-button;
+    right: 72px;
+    background-image: image-url("arrow-next.png");
 }
-.slideshow-caption{
+
+.slideshow-caption {
     position: absolute;
     z-index: 1;
     left: 50%;
     top: 520px;
     margin-left: -410px;
     width: 820px;
+    text-align: center;
+
+    h2 {
+        font-size: 6em;
+        margin: 0 0 10px;
+        font-family: "OpenSansCondensedBold";
+    }
+
+    p {
+        font-family: "OpenSansBold", Arial, Helvetica, serif;
+        font-size: 1.8em;
+    }
 }
-.content-home{
+
+.content-home {
     background-image: image-url("bg-content.png");
     background-position: left top;
     background-repeat: repeat-x;
     position: relative;
-    .content-home-container{
-        @extend %bcolor1;
+    margin: 650px 0 0;
+    width: 100%;
+    @extend %bcolor1;
+
+    .content-home-container {
+        padding: 1px 0 50px 0;
+    }
+}
+
+.callouts {
+
+    @include l-4-4-4;
+    margin-top: -166px;
+    position: relative;
+
+    .callout-block {
+        margin-bottom: 20px;
+
+
+
+        &:hover {
+            .button {
+                background-position: left bottom;
+                @include single-text-shadow(0, 0, 3px, rgba(255,255,255,0.5));
+            }
+        }
+    }
+
+    .callout-title {
+        font-family: "OpenSansCondensedLight";
+        font-size: 1.9em;
+
+        @include single-text-shadow(1px, 1px, 1px, rgba(0,0,0,0.25));
+
+        a {
+            display: block;
+            height: 25px;
+            padding: 10px 20px;
+            background-image: image-url("bg-callout-title.png");
+            background-position: left top;
+            background-repeat: repeat-x;
+            @extend %bcolor2;
+            color: #000;
+            @include border-top-radius(4px);
+
+            &:hover {
+                background-position: left bottom;
+            }
+        }
+    }
+
+    .callout-image {
+        width: 316px;
+        height: 120px;
+        padding-bottom: 5px;
+
+        img {
+            max-width: 100%;
+        }
+
+        width:span(12 of 12);
+
+    }
+
+    .callout-content {
+        @extend %color2;
+        background-color: white;
+        @include border-bottom-radius(4px);
+        padding: 15px 20px;
+        text-align: center;
+    }
+
+    .button {
+        float: none;
+        display: inline-block;
+
+        a {
+            display: block;
+            background-image: image-url("bg-button.png");
+            background-position: left top;
+            background-repeat: repeat-x;
+            @extend %bcolor2;
+            color: white;
+            padding: 5px 15px;
+            font-size: 1.2em;
+            margin: 15px 0 0;
+        }
     }
 }

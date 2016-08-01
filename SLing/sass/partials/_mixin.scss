@@ -1,45 +1,84 @@
-$desktop-width : 1083px;
-$tablap-l-width : 914px;
-$tablap-p-width : 746px;
-$mobile-width : 533px;
+$desktop-width: 1083px;
+$tablap-l-width: 914px;
+$tablap-p-width: 746px;
+$mobile-width: 533px;
 
-$desktop-breakpoint : 988px;
-$tablap-l-breakpoint : 820px;
-$tablap-p-breakpoint : 652px;
-$mobile-l-breakpoint : 400px;
-$mobile-p-breakpoint : 232px;
-@mixin cus-container
-{
+$desktop-breakpoint: 988px;
+$tablap-l-breakpoint: 820px;
+$tablap-p-breakpoint: 652px;
+$mobile-l-breakpoint: 316px;
+$mobile-p-breakpoint: 232px;
 
-   @include container($desktop-breakpoint);
+@mixin cus-container {
 
-   @media only screen and (max-width:$desktop-width - 1) and (min-width:$tablap-l-width){
-       @include container($tablap-l-breakpoint);
-   }
-   @media only screen and (max-width:$tablap-l-width - 1) and (min-width:$tablap-p-width){
-       @include container($tablap-p-breakpoint);
-   }
-   @media only screen and (max-width:$tablap-p-width - 1) and (min-width:$mobile-width + 1){
-       @include container($mobile-l-breakpoint);
-   }
-   @media only screen and (max-width:$mobile-width){
-       @include container($mobile-p-breakpoint);
-   }
+    @include container($desktop-breakpoint);
+
+    @media only screen and (max-width:$desktop-width - 1) and (min-width:$tablap-l-width) {
+        @include container($tablap-l-breakpoint);
+    }
+
+    @media only screen and (max-width:$tablap-l-width - 1) and (min-width:$tablap-p-width) {
+        @include container($tablap-p-breakpoint);
+    }
+
+    @media only screen and (max-width:$tablap-p-width - 1) and (min-width:$mobile-width + 1) {
+        @include container($mobile-l-breakpoint);
+    }
+
+    @media only screen and (max-width:$mobile-width) {
+        @include container($mobile-p-breakpoint);
+    }
 }
-@mixin tablab-container
-{
-    $blueprint-container-size: 652px;
-    @include container;
-}
-@mixin mobile-l-container
-{
-    $blueprint-container-size: 400px;
 
-    @include container;
-    width:$blueprint-container-size;
-}
-@mixin mobile-p-container
-{
-    $blueprint-container-size: 232px;
-    @include container;
+@mixin l-4-4-4 {
+    @include cus-container;
+    
+    > div {
+      
+        @include span(1 of 3 (20 / ((container(static) - 20 * 2 ) / 3)));
+
+       
+
+        &.last {
+            
+             @include span(1 of 3 (316px 20px) last);
+        }
+
+        @media only screen and (max-width:$desktop-width - 1) and (min-width:$tablap-l-width) {
+            @include span(260px);
+
+
+            &.last {
+                @include span(260px last);
+            }
+        }
+
+        @media only screen and (max-width:$tablap-l-width - 1) and (min-width:$tablap-p-width) {
+            @include span(204px);
+
+
+
+            &.last {
+                @include span(204px last);
+            }
+        }
+
+        @media only screen and (max-width:$tablap-p-width - 1) and (min-width:$mobile-width + 1) {
+            @include span(12 of 12);
+
+            &.last {
+                @include span(12 of 12);
+            }
+
+            margin-bottom: 20px;
+        }
+
+        @media only screen and (max-width:$mobile-width) {
+            @include span(12 of 12);
+
+            &.last {
+                @include span(12 of 12);
+            }
+        }
+    }
 }
