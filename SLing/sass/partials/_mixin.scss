@@ -9,7 +9,7 @@ $tablap-p-breakpoint: 652px;
 $mobile-l-breakpoint: 316px;
 $mobile-p-breakpoint: 232px;
 
-@mixin cus-container {
+@mixin cus-container  {
 
     @include container($desktop-breakpoint);
 
@@ -30,18 +30,18 @@ $mobile-p-breakpoint: 232px;
     }
 }
 
-@mixin l-4-4-4 {
+@mixin l-4-4-4 ($cus-gutter : 20px){
     @include cus-container;
     
     > div {
       
-        @include span(1 of 3 (20 / ((container(static) - 20 * 2 ) / 3)));
+        @include span(4);
 
        
 
         &.last {
             
-             @include span(1 of 3 (316px 20px) last);
+             @include span(4  last);
         }
 
         @media only screen and (max-width:$desktop-width - 1) and (min-width:$tablap-l-width) {

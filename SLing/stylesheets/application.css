@@ -1,202 +1,979 @@
-/*
-Error: Static math requires a valid column-width setting.
-        on line 12 of D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/susy-2.2.12/sass/susy/language/susy/_validation.scss, in `span'
-        from line 38 of C:/Users/fm/Documents/git-projects/web/SLing/sass/partials/_mixin.scss, in `l-4-4-4'
-        from line 65 of C:/Users/fm/Documents/git-projects/web/SLing/sass/partials/components/_cav.scss
-        from line 12 of C:/Users/fm/Documents/git-projects/web/SLing/sass/application.scss
+/* line 5, D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a,
+a:link,
+a:visited, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
 
-7: 
-8: @import "partials/base";
-9: @import "partials/mixin";
-10: @import "partials/components/header";
-11: @import "partials/components/nav";
-12: @import "partials/components/cav";
-13: @import "partials/components/footer";
+/* line 22, D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
 
-Backtrace:
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/susy-2.2.12/sass/susy/language/susy/_validation.scss:12:in `span'
-C:/Users/fm/Documents/git-projects/web/SLing/sass/partials/_mixin.scss:38:in `l-4-4-4'
-C:/Users/fm/Documents/git-projects/web/SLing/sass/partials/components/_cav.scss:65
-C:/Users/fm/Documents/git-projects/web/SLing/sass/application.scss:12
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:226:in `visit_error'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `visit'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `block in with_base'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:115:in `with_frame'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `with_base'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `visit'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:301:in `block (2 levels) in visit_if'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:301:in `map'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:301:in `block in visit_if'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:181:in `with_environment'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:300:in `visit_if'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `visit'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `block in with_base'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:115:in `with_frame'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `with_base'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `visit'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:8:in `visit'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/script/tree/funcall.rb:251:in `block (3 levels) in perform_sass_fn'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/script/tree/funcall.rb:251:in `each'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/script/tree/funcall.rb:251:in `block (2 levels) in perform_sass_fn'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/script/tree/funcall.rb:250:in `catch'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/script/tree/funcall.rb:250:in `block in perform_sass_fn'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:84:in `perform_arguments'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/script/tree/funcall.rb:247:in `perform_sass_fn'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/script/tree/funcall.rb:132:in `_perform'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/script/tree/node.rb:58:in `perform'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:299:in `visit_if'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `visit'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `block in with_base'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:115:in `with_frame'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `with_base'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `visit'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:301:in `block (2 levels) in visit_if'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:301:in `map'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:301:in `block in visit_if'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:181:in `with_environment'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:300:in `visit_if'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `visit'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `block in with_base'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:115:in `with_frame'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `with_base'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `visit'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:8:in `visit'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/script/tree/funcall.rb:251:in `block (3 levels) in perform_sass_fn'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/script/tree/funcall.rb:251:in `each'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/script/tree/funcall.rb:251:in `block (2 levels) in perform_sass_fn'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/script/tree/funcall.rb:250:in `catch'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/script/tree/funcall.rb:250:in `block in perform_sass_fn'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:84:in `perform_arguments'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/script/tree/funcall.rb:247:in `perform_sass_fn'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/script/tree/funcall.rb:132:in `_perform'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/script/tree/node.rb:58:in `perform'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:405:in `visit_return'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `visit'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `block in with_base'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:115:in `with_frame'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `with_base'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `visit'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:8:in `visit'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/script/tree/funcall.rb:251:in `block (3 levels) in perform_sass_fn'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/script/tree/funcall.rb:251:in `each'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/script/tree/funcall.rb:251:in `block (2 levels) in perform_sass_fn'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/script/tree/funcall.rb:250:in `catch'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/script/tree/funcall.rb:250:in `block in perform_sass_fn'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:84:in `perform_arguments'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/script/tree/funcall.rb:247:in `perform_sass_fn'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/script/tree/funcall.rb:132:in `_perform'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/script/tree/node.rb:58:in `perform'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/script/tree/operation.rb:64:in `_perform'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/script/tree/node.rb:58:in `perform'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/script/tree/operation.rb:64:in `_perform'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/script/tree/node.rb:58:in `perform'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/script/tree/operation.rb:73:in `_perform'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/script/tree/node.rb:58:in `perform'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/script/tree/list_literal.rb:63:in `block in _perform'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/script/tree/list_literal.rb:63:in `map'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/script/tree/list_literal.rb:63:in `_perform'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/script/tree/node.rb:58:in `perform'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:357:in `block (2 levels) in visit_mixin'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:357:in `map'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:357:in `block in visit_mixin'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:98:in `block in with_mixin'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:115:in `with_frame'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:98:in `with_mixin'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:349:in `visit_mixin'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `visit'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `block in with_base'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:115:in `with_frame'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `with_base'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `visit'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:433:in `block (2 levels) in visit_rule'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:433:in `map'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:433:in `block in visit_rule'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:181:in `with_environment'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:431:in `visit_rule'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `visit'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `block in with_base'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:115:in `with_frame'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `with_base'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `visit'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:366:in `block (4 levels) in visit_mixin'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:366:in `map'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:366:in `block (3 levels) in visit_mixin'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:181:in `with_environment'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:366:in `block (2 levels) in visit_mixin'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:84:in `perform_arguments'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:361:in `block in visit_mixin'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:98:in `block in with_mixin'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:115:in `with_frame'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:98:in `with_mixin'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:349:in `visit_mixin'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `visit'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `block in with_base'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:115:in `with_frame'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `with_base'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `visit'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:433:in `block (2 levels) in visit_rule'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:433:in `map'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:433:in `block in visit_rule'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:181:in `with_environment'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:431:in `visit_rule'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `visit'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `block in with_base'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:115:in `with_frame'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `with_base'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `visit'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:328:in `block (2 levels) in visit_import'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:328:in `map'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:328:in `block in visit_import'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:88:in `block in with_import'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:115:in `with_frame'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:88:in `with_import'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:325:in `visit_import'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `visit'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `block in with_base'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:115:in `with_frame'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `with_base'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `visit'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:52:in `map'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:169:in `block in visit_children'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:181:in `with_environment'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:168:in `visit_children'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:188:in `visit_root'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `visit'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:159:in `visit'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:8:in `visit'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/root_node.rb:36:in `css_tree'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/root_node.rb:20:in `render'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/engine.rb:281:in `render'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:17:in `block in render'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:29:in `with_import_scope'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:16:in `render'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:494:in `update_stylesheet'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:209:in `each'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:473:in `on_file_changed'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:331:in `block in watch'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/listen-1.1.6/lib/listen/listener.rb:236:in `call'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/listen-1.1.6/lib/listen/listener.rb:236:in `on_change'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/listen-1.1.6/lib/listen/listener.rb:271:in `block in initialize_adapter'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/listen-1.1.6/lib/listen/adapters/polling.rb:48:in `call'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/listen-1.1.6/lib/listen/adapters/polling.rb:48:in `poll_changed_directories'
-D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/listen-1.1.6/lib/listen/adapter.rb:289:in `block in start_poller'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Static math requires a valid column-width setting.\A         on line 12 of D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/susy-2.2.12/sass/susy/language/susy/_validation.scss, in `span'\A         from line 38 of C:/Users/fm/Documents/git-projects/web/SLing/sass/partials/_mixin.scss, in `l-4-4-4'\A         from line 65 of C:/Users/fm/Documents/git-projects/web/SLing/sass/partials/components/_cav.scss\A         from line 12 of C:/Users/fm/Documents/git-projects/web/SLing/sass/application.scss\A \A 7: \A 8: @import \"partials/base\";\A 9: @import \"partials/mixin\";\A 10: @import \"partials/components/header\";\A 11: @import \"partials/components/nav\";\A 12: @import \"partials/components/cav\";\A 13: @import \"partials/components/footer\";"; }
+/* line 24, D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/reset/_utilities.scss */
+a img, a:link img, a:visited img {
+  border: none;
+}
+
+/* line 116, D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+@font-face {
+  font-family: "OpenSansRegular";
+  src: url('/fonts/OpenSans-Regular-webfont.woff?1465477746');
+  src: url('/fonts/OpenSans-Regular-webfont.woff?&1465477746#iefix') format('embedded-opentype'), url('/fonts/open-sans/OpenSans-Regular-webfont.woff?1465477746&1465477746') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "OpenSansBold";
+  src: url('/fonts/OpenSans-Bold-webfont.woff?1465477519');
+  src: url('/fonts/OpenSans-Bold-webfont.woff?&1465477519#iefix') format('embedded-opentype'), url('/fonts/open-sans/OpenSans-Bold-webfont.woff?1465477519&1465477519') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "OpenSansCondensedLight";
+  src: url('/fonts/OpenSans-CondLight-webfont.woff?1465477730');
+  src: url('/fonts/OpenSans-CondLight-webfont.woff?&1465477730#iefix') format('embedded-opentype'), url('/fonts/open-sans/OpenSans-CondLight-webfont.woff?1465477730&1465477730') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+/* line 15, ../sass/partials/_base.scss */
+body {
+  font-size: 63%;
+  font-family: "OpenSansRegular", Arial, Helvetica, sans-serif;
+  color: white;
+}
+
+/* line 22, ../sass/partials/_base.scss */
+.left {
+  float: left;
+  text-align: left;
+}
+
+/* line 26, ../sass/partials/_base.scss */
+.right {
+  float: right;
+  text-align: right;
+}
+
+/* line 31, ../sass/partials/_base.scss */
+a, a:link, a:visited {
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+}
+
+/* line 36, ../sass/partials/_base.scss */
+a:link, a:visited {
+  transition: all 0.3s linear;
+}
+
+/* line 40, ../sass/partials/_base.scss */
+body, .header, .content-home, .widget-area-footer, .widget-area-footer-container .widget-area .button a, .footer {
+  background-color: #9E0B0F;
+}
+
+/* line 43, ../sass/partials/_base.scss */
+.navigation .sub-menu li:hover > a, .navigation-mobile .navigation-mobile-container .menu li:hover > a, .navigation-mobile .navigation-mobile-container .menu .sub-menu li:hover > a, .callouts .callout-title a, .callouts .button a {
+  background-color: #FCAF17;
+}
+
+/* line 46, ../sass/partials/_base.scss */
+.navigation li.current-menu-item a, .navigation li a:hover, .navigation-mobile .navigation-mobile-container .select:hover {
+  color: #FCAF17;
+}
+
+/* line 49, ../sass/partials/_base.scss */
+.navigation .sub-menu li a, .navigation-mobile .navigation-mobile-container .menu li a, .navigation-mobile .navigation-mobile-container .menu .sub-menu li a, .callouts .callout-content {
+  color: #9E0B0F;
+}
+
+/* line 52, ../sass/partials/_base.scss */
+.shadow {
+  -moz-box-shadow: rgba(0, 0, 0, 0.5) 0 0px 8px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0 0px 8px;
+  box-shadow: rgba(0, 0, 0, 0.5) 0 0px 8px;
+}
+
+/* line 55, ../sass/partials/_base.scss */
+.shadow-big-bottom {
+  -moz-box-shadow: black 0 5px 30px;
+  -webkit-box-shadow: black 0 5px 30px;
+  box-shadow: black 0 5px 30px;
+}
+
+/* line 58, ../sass/partials/_base.scss */
+.shadow-big-top {
+  -moz-box-shadow: rgba(0, 0, 0, 0.75) 0 -5px 30px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.75) 0 -5px 30px;
+  box-shadow: rgba(0, 0, 0, 0.75) 0 -5px 30px;
+}
+
+/* line 1, ../sass/partials/components/_header.scss */
+.header {
+  text-align: center;
+  position: relative;
+  width: 100%;
+  height: 245px;
+  background-image: url('/images/bg-header.png?1465486615');
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+/* line 11, ../sass/partials/components/_header.scss */
+.header .header-container {
+  background: url('/images/bg-header-container.png?1465486601') left top repeat-x;
+}
+/* line 16, ../sass/partials/components/_header.scss */
+.header .topbar {
+  max-width: 988px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 50px;
+  margin: 0 auto;
+}
+/* line 12, D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/susy-2.2.12/sass/susy/output/support/_clearfix.scss */
+.header .topbar:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+@media only screen and (max-width: 1082px) and (min-width: 914px) {
+  /* line 16, ../sass/partials/components/_header.scss */
+  .header .topbar {
+    max-width: 820px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* line 12, D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/susy-2.2.12/sass/susy/output/support/_clearfix.scss */
+  .header .topbar:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+}
+@media only screen and (max-width: 913px) and (min-width: 746px) {
+  /* line 16, ../sass/partials/components/_header.scss */
+  .header .topbar {
+    max-width: 652px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* line 12, D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/susy-2.2.12/sass/susy/output/support/_clearfix.scss */
+  .header .topbar:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+}
+@media only screen and (max-width: 745px) and (min-width: 534px) {
+  /* line 16, ../sass/partials/components/_header.scss */
+  .header .topbar {
+    max-width: 316px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* line 12, D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/susy-2.2.12/sass/susy/output/support/_clearfix.scss */
+  .header .topbar:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+}
+@media only screen and (max-width: 533px) {
+  /* line 16, ../sass/partials/components/_header.scss */
+  .header .topbar {
+    max-width: 232px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* line 12, D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/susy-2.2.12/sass/susy/output/support/_clearfix.scss */
+  .header .topbar:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+}
+/* line 23, ../sass/partials/components/_header.scss */
+.header .tagline {
+  padding: 15px 0;
+  font-family: "OpenSansCondensedLight";
+  font-size: 1.5em;
+  opacity: 0.4;
+  font-weight: 900;
+}
+@media only screen and (max-width: 746px) {
+  /* line 23, ../sass/partials/components/_header.scss */
+  .header .tagline {
+    display: none;
+  }
+}
+/* line 35, ../sass/partials/components/_header.scss */
+.header .logo {
+  width: 300px;
+  height: 140px;
+  margin: 0 auto;
+}
+/* line 40, ../sass/partials/components/_header.scss */
+.header .logo .logo-image {
+  margin: -50px auto;
+  width: 300px;
+  height: 190px;
+}
+
+/* line 1, ../sass/partials/components/_nav.scss */
+.navigation li, .navigation-mobile .navigation-mobile-container .select {
+  border-bottom: 5px solid transparent;
+  text-shadow: 1px 1px 3px #aaaaaa;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5) #aaaaaa;
+  -moz-transition: border 0.3s linear 0s;
+  -o-transition: border 0.3s linear 0s;
+  -webkit-transition: border 0.3s linear;
+  -webkit-transition-delay: 0s;
+  transition: border 0.3s linear 0s;
+}
+/* line 6, ../sass/partials/components/_nav.scss */
+.navigation li:hover, .navigation-mobile .navigation-mobile-container .select:hover {
+  border-color: #FCAF17;
+}
+
+/* line 11, ../sass/partials/components/_nav.scss */
+.navigation, .navigation-mobile {
+  height: 55px;
+  background: url('/images/bg-menu.png?1465486626') left bottom repeat-x;
+}
+
+/* line 16, ../sass/partials/components/_nav.scss */
+.navigation .sub-menu li, .navigation-mobile .navigation-mobile-container .menu li, .navigation-mobile .navigation-mobile-container .menu .sub-menu li {
+  font-size: 0.85em;
+  line-height: normal;
+  text-transform: none;
+  height: auto;
+  text-shadow: none;
+}
+/* line 22, ../sass/partials/components/_nav.scss */
+.navigation .sub-menu li a, .navigation-mobile .navigation-mobile-container .menu li a, .navigation-mobile .navigation-mobile-container .menu .sub-menu li a {
+  display: block;
+  float: none;
+  padding: 10px 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+/* line 32, ../sass/partials/components/_nav.scss */
+.navigation .sub-menu li:hover > a, .navigation-mobile .navigation-mobile-container .menu li:hover > a, .navigation-mobile .navigation-mobile-container .menu .sub-menu li:hover > a {
+  color: white;
+}
+
+/* line 38, ../sass/partials/components/_nav.scss */
+.navigation {
+  position: relative;
+  text-transform: uppercase;
+  width: 100%;
+  font-family: "OpenSansCondensedLight";
+}
+/* line 46, ../sass/partials/components/_nav.scss */
+.navigation .sub-menu {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  top: -9999px;
+  height: auto;
+}
+/* line 53, ../sass/partials/components/_nav.scss */
+.navigation .sub-menu li {
+  width: 200px;
+  border-bottom: none;
+}
+@media only screen and (max-width: 746px) {
+  /* line 38, ../sass/partials/components/_nav.scss */
+  .navigation {
+    display: none;
+  }
+}
+/* line 68, ../sass/partials/components/_nav.scss */
+.navigation li {
+  display: inline-block;
+  position: relative;
+  height: 50px;
+  font-size: 1.9em;
+  font-weight: 900;
+}
+@media only screen and (max-width: 1082px) and (min-width: 914px) {
+  /* line 68, ../sass/partials/components/_nav.scss */
+  .navigation li {
+    font-size: 1.7em;
+  }
+}
+@media only screen and (max-width: 913px) and (min-width: 746px) {
+  /* line 68, ../sass/partials/components/_nav.scss */
+  .navigation li {
+    font-size: 1.5em;
+  }
+}
+/* line 89, ../sass/partials/components/_nav.scss */
+.navigation li a {
+  display: block;
+  float: left;
+  padding: 13px 15px 19px;
+}
+@media only screen and (max-width: 913px) and (min-width: 746px) {
+  /* line 89, ../sass/partials/components/_nav.scss */
+  .navigation li a {
+    padding: 13px 7px 19px;
+  }
+}
+/* line 104, ../sass/partials/components/_nav.scss */
+.navigation li:hover .sub-menu {
+  opacity: 1;
+  top: 55px;
+}
+
+/* line 112, ../sass/partials/components/_nav.scss */
+.navigation-mobile {
+  display: none;
+  font-family: "OpenSansCondensedLight";
+}
+@media only screen and (max-width: 746px) {
+  /* line 112, ../sass/partials/components/_nav.scss */
+  .navigation-mobile {
+    display: block;
+  }
+}
+/* line 122, ../sass/partials/components/_nav.scss */
+.navigation-mobile .navigation-mobile-container {
+  max-width: 988px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 12, D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/susy-2.2.12/sass/susy/output/support/_clearfix.scss */
+.navigation-mobile .navigation-mobile-container:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+@media only screen and (max-width: 1082px) and (min-width: 914px) {
+  /* line 122, ../sass/partials/components/_nav.scss */
+  .navigation-mobile .navigation-mobile-container {
+    max-width: 820px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* line 12, D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/susy-2.2.12/sass/susy/output/support/_clearfix.scss */
+  .navigation-mobile .navigation-mobile-container:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+}
+@media only screen and (max-width: 913px) and (min-width: 746px) {
+  /* line 122, ../sass/partials/components/_nav.scss */
+  .navigation-mobile .navigation-mobile-container {
+    max-width: 652px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* line 12, D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/susy-2.2.12/sass/susy/output/support/_clearfix.scss */
+  .navigation-mobile .navigation-mobile-container:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+}
+@media only screen and (max-width: 745px) and (min-width: 534px) {
+  /* line 122, ../sass/partials/components/_nav.scss */
+  .navigation-mobile .navigation-mobile-container {
+    max-width: 316px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* line 12, D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/susy-2.2.12/sass/susy/output/support/_clearfix.scss */
+  .navigation-mobile .navigation-mobile-container:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+}
+@media only screen and (max-width: 533px) {
+  /* line 122, ../sass/partials/components/_nav.scss */
+  .navigation-mobile .navigation-mobile-container {
+    max-width: 232px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* line 12, D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/susy-2.2.12/sass/susy/output/support/_clearfix.scss */
+  .navigation-mobile .navigation-mobile-container:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+}
+/* line 126, ../sass/partials/components/_nav.scss */
+.navigation-mobile .navigation-mobile-container .select {
+  font-size: 1.9em;
+  text-transform: uppercase;
+  height: 50px;
+}
+/* line 131, ../sass/partials/components/_nav.scss */
+.navigation-mobile .navigation-mobile-container .select a {
+  display: block;
+  padding: 16px 20px 20px;
+}
+/* line 141, ../sass/partials/components/_nav.scss */
+.navigation-mobile .navigation-mobile-container .menu {
+  display: none;
+}
+/* line 147, ../sass/partials/components/_nav.scss */
+.navigation-mobile .navigation-mobile-container .menu li a {
+  text-align: left;
+  background-color: white;
+  padding: 10px 20px;
+}
+/* line 158, ../sass/partials/components/_nav.scss */
+.navigation-mobile .navigation-mobile-container .menu .sub-menu li a {
+  text-align: left;
+  background-color: #f0f0f0;
+  padding: 10px 20px 10px 40px;
+}
+
+/* line 1, ../sass/partials/components/_cav.scss */
+.slideshow-prev, .slideshow-next {
+  position: absolute;
+  width: 38px;
+  height: 72px;
+  top: 550px;
+  z-index: 1;
+  opacity: 0.6;
+  display: block;
+  -moz-transition: opacity 0.3s linear 0s;
+  -o-transition: opacity 0.3s linear 0s;
+  -webkit-transition: opacity 0.3s linear;
+  -webkit-transition-delay: 0s;
+  transition: opacity 0.3s linear 0s;
+}
+/* line 11, ../sass/partials/components/_cav.scss */
+.slideshow-prev:hover, .slideshow-next:hover {
+  opacity: 1;
+}
+
+/* line 16, ../sass/partials/components/_cav.scss */
+.slideshow-prev {
+  left: 40px;
+  background-image: url('/images/arrow-prev.png?1466224101');
+}
+
+/* line 22, ../sass/partials/components/_cav.scss */
+.slideshow-next {
+  right: 72px;
+  background-image: url('/images/arrow-next.png?1466224091');
+}
+
+/* line 28, ../sass/partials/components/_cav.scss */
+.slideshow-caption {
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  top: 520px;
+  margin-left: -410px;
+  width: 820px;
+  text-align: center;
+}
+/* line 37, ../sass/partials/components/_cav.scss */
+.slideshow-caption h2 {
+  font-size: 6em;
+  margin: 0 0 10px;
+  font-family: "OpenSansCondensedBold";
+}
+/* line 43, ../sass/partials/components/_cav.scss */
+.slideshow-caption p {
+  font-family: "OpenSansBold", Arial, Helvetica, serif;
+  font-size: 1.8em;
+}
+
+/* line 49, ../sass/partials/components/_cav.scss */
+.content-home {
+  background-image: url('/images/bg-content.png?1465486576');
+  background-position: left top;
+  background-repeat: repeat-x;
+  position: relative;
+  margin: 650px 0 0;
+  width: 100%;
+}
+/* line 58, ../sass/partials/components/_cav.scss */
+.content-home .content-home-container {
+  padding: 1px 0 50px 0;
+}
+
+/* line 63, ../sass/partials/components/_cav.scss */
+.callouts {
+  max-width: 988px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -166px;
+  position: relative;
+}
+/* line 12, D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/susy-2.2.12/sass/susy/output/support/_clearfix.scss */
+.callouts:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+@media only screen and (max-width: 1082px) and (min-width: 914px) {
+  /* line 63, ../sass/partials/components/_cav.scss */
+  .callouts {
+    max-width: 820px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* line 12, D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/susy-2.2.12/sass/susy/output/support/_clearfix.scss */
+  .callouts:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+}
+@media only screen and (max-width: 913px) and (min-width: 746px) {
+  /* line 63, ../sass/partials/components/_cav.scss */
+  .callouts {
+    max-width: 652px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* line 12, D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/susy-2.2.12/sass/susy/output/support/_clearfix.scss */
+  .callouts:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+}
+@media only screen and (max-width: 745px) and (min-width: 534px) {
+  /* line 63, ../sass/partials/components/_cav.scss */
+  .callouts {
+    max-width: 316px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* line 12, D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/susy-2.2.12/sass/susy/output/support/_clearfix.scss */
+  .callouts:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+}
+@media only screen and (max-width: 533px) {
+  /* line 63, ../sass/partials/components/_cav.scss */
+  .callouts {
+    max-width: 232px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* line 12, D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/susy-2.2.12/sass/susy/output/support/_clearfix.scss */
+  .callouts:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+}
+/* line 36, ../sass/partials/_mixin.scss */
+.callouts > div {
+  width: 32.20339%;
+  float: left;
+  margin-right: 1.69492%;
+}
+/* line 42, ../sass/partials/_mixin.scss */
+.callouts > div.last {
+  width: 32.20339%;
+  float: right;
+  margin-right: 0;
+}
+@media only screen and (max-width: 1082px) and (min-width: 914px) {
+  /* line 36, ../sass/partials/_mixin.scss */
+  .callouts > div {
+    width: 260px;
+    float: left;
+    margin-right: 1.69492%;
+  }
+  /* line 51, ../sass/partials/_mixin.scss */
+  .callouts > div.last {
+    width: 260px;
+    float: right;
+    margin-right: 0;
+  }
+}
+@media only screen and (max-width: 913px) and (min-width: 746px) {
+  /* line 36, ../sass/partials/_mixin.scss */
+  .callouts > div {
+    width: 204px;
+    float: left;
+    margin-right: 1.69492%;
+  }
+  /* line 61, ../sass/partials/_mixin.scss */
+  .callouts > div.last {
+    width: 204px;
+    float: right;
+    margin-right: 0;
+  }
+}
+@media only screen and (max-width: 745px) and (min-width: 534px) {
+  /* line 36, ../sass/partials/_mixin.scss */
+  .callouts > div {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  /* line 69, ../sass/partials/_mixin.scss */
+  .callouts > div.last {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+@media only screen and (max-width: 533px) {
+  /* line 36, ../sass/partials/_mixin.scss */
+  .callouts > div {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  /* line 79, ../sass/partials/_mixin.scss */
+  .callouts > div.last {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+/* line 69, ../sass/partials/components/_cav.scss */
+.callouts .callout-block {
+  margin-bottom: 20px;
+}
+/* line 75, ../sass/partials/components/_cav.scss */
+.callouts .callout-block:hover .button {
+  background-position: left bottom;
+  text-shadow: 0 0 3px #aaaaaa;
+  text-shadow: 0 0 3px rgba(255, 255, 255, 0.5) #aaaaaa;
+}
+/* line 82, ../sass/partials/components/_cav.scss */
+.callouts .callout-title {
+  font-family: "OpenSansCondensedLight";
+  font-size: 1.9em;
+  text-shadow: 1px 1px 1px #aaaaaa;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25) #aaaaaa;
+}
+/* line 88, ../sass/partials/components/_cav.scss */
+.callouts .callout-title a {
+  display: block;
+  height: 25px;
+  padding: 10px 20px;
+  background-image: url('/images/bg-callout-title.png?1466224119');
+  background-position: left top;
+  background-repeat: repeat-x;
+  color: #000;
+  -moz-border-radius-topleft: 4px;
+  -webkit-border-top-left-radius: 4px;
+  border-top-left-radius: 4px;
+  -moz-border-radius-topright: 4px;
+  -webkit-border-top-right-radius: 4px;
+  border-top-right-radius: 4px;
+}
+/* line 99, ../sass/partials/components/_cav.scss */
+.callouts .callout-title a:hover {
+  background-position: left bottom;
+}
+/* line 105, ../sass/partials/components/_cav.scss */
+.callouts .callout-image {
+  width: 316px;
+  height: 120px;
+  padding-bottom: 5px;
+  width: 100%;
+}
+/* line 110, ../sass/partials/components/_cav.scss */
+.callouts .callout-image img {
+  max-width: 100%;
+}
+/* line 118, ../sass/partials/components/_cav.scss */
+.callouts .callout-content {
+  background-color: white;
+  -moz-border-radius-bottomleft: 4px;
+  -webkit-border-bottom-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  -moz-border-radius-bottomright: 4px;
+  -webkit-border-bottom-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  padding: 15px 20px;
+  text-align: center;
+}
+/* line 126, ../sass/partials/components/_cav.scss */
+.callouts .button {
+  float: none;
+  display: inline-block;
+}
+/* line 130, ../sass/partials/components/_cav.scss */
+.callouts .button a {
+  display: block;
+  background-image: url('/images/bg-button.png?1465486567');
+  background-position: left top;
+  background-repeat: repeat-x;
+  color: white;
+  padding: 5px 15px;
+  font-size: 1.2em;
+  margin: 15px 0 0;
+}
+
+/* line 1, ../sass/partials/components/_footer.scss */
+.widget-area-footer {
+  background: url('/images/bg-widget-area-footer.png?1465486652') top left repeat-x;
+  width: 100%;
+  text-align: center;
+}
+
+/* line 7, ../sass/partials/components/_footer.scss */
+.widget-area-footer-container {
+  max-width: 988px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 12, D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/susy-2.2.12/sass/susy/output/support/_clearfix.scss */
+.widget-area-footer-container:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+@media only screen and (max-width: 1082px) and (min-width: 914px) {
+  /* line 7, ../sass/partials/components/_footer.scss */
+  .widget-area-footer-container {
+    max-width: 820px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* line 12, D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/susy-2.2.12/sass/susy/output/support/_clearfix.scss */
+  .widget-area-footer-container:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+}
+@media only screen and (max-width: 913px) and (min-width: 746px) {
+  /* line 7, ../sass/partials/components/_footer.scss */
+  .widget-area-footer-container {
+    max-width: 652px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* line 12, D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/susy-2.2.12/sass/susy/output/support/_clearfix.scss */
+  .widget-area-footer-container:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+}
+@media only screen and (max-width: 745px) and (min-width: 534px) {
+  /* line 7, ../sass/partials/components/_footer.scss */
+  .widget-area-footer-container {
+    max-width: 316px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* line 12, D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/susy-2.2.12/sass/susy/output/support/_clearfix.scss */
+  .widget-area-footer-container:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+}
+@media only screen and (max-width: 533px) {
+  /* line 7, ../sass/partials/components/_footer.scss */
+  .widget-area-footer-container {
+    max-width: 232px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* line 12, D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/susy-2.2.12/sass/susy/output/support/_clearfix.scss */
+  .widget-area-footer-container:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+}
+/* line 10, ../sass/partials/components/_footer.scss */
+.widget-area-footer-container .widget-area {
+  width: 296px;
+  float: left;
+  margin-right: 1.69492%;
+  margin-right: 40px;
+  padding: 40px 0 20px;
+}
+/* line 14, ../sass/partials/components/_footer.scss */
+.widget-area-footer-container .widget-area.last {
+  width: 296px;
+  float: right;
+  margin-right: 0;
+}
+/* line 17, ../sass/partials/components/_footer.scss */
+.widget-area-footer-container .widget-area .textwidget {
+  text-align: center;
+}
+/* line 19, ../sass/partials/components/_footer.scss */
+.widget-area-footer-container .widget-area .textwidget strong {
+  font-family: "OpenSansBold";
+  font-weight: normal;
+}
+/* line 23, ../sass/partials/components/_footer.scss */
+.widget-area-footer-container .widget-area .textwidget em {
+  font-style: italic;
+}
+/* line 26, ../sass/partials/components/_footer.scss */
+.widget-area-footer-container .widget-area .textwidget h4 {
+  font-size: 1.5em;
+  padding: 10px 0;
+  font-weight: normal;
+}
+/* line 32, ../sass/partials/components/_footer.scss */
+.widget-area-footer-container .widget-area .button {
+  text-align: center;
+}
+/* line 34, ../sass/partials/components/_footer.scss */
+.widget-area-footer-container .widget-area .button a {
+  float: none;
+  font-size: 1.1em;
+  background-image: url('/images/bg-button.png?1465486567');
+  background-position: top left;
+  background-repeat: repeat-x;
+  padding: 7px 20px;
+}
+/* line 43, ../sass/partials/components/_footer.scss */
+.widget-area-footer-container .widget-area .button a:hover {
+  background-position: left bottom;
+  text-shadow: 0 0 3px #aaaaaa;
+  text-shadow: 0 0 3px rgba(255, 255, 255, 0.5) #aaaaaa;
+}
+
+/* line 51, ../sass/partials/components/_footer.scss */
+.footer {
+  background-image: url('/images/bg-footer.png?1465486589');
+  background-position: top left;
+  background-repeat: repeat-x;
+}
+/* line 57, ../sass/partials/components/_footer.scss */
+.footer .footer-container {
+  padding: 40px 0;
+  max-width: 988px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 12, D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/susy-2.2.12/sass/susy/output/support/_clearfix.scss */
+.footer .footer-container:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+@media only screen and (max-width: 1082px) and (min-width: 914px) {
+  /* line 57, ../sass/partials/components/_footer.scss */
+  .footer .footer-container {
+    max-width: 820px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* line 12, D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/susy-2.2.12/sass/susy/output/support/_clearfix.scss */
+  .footer .footer-container:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+}
+@media only screen and (max-width: 913px) and (min-width: 746px) {
+  /* line 57, ../sass/partials/components/_footer.scss */
+  .footer .footer-container {
+    max-width: 652px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* line 12, D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/susy-2.2.12/sass/susy/output/support/_clearfix.scss */
+  .footer .footer-container:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+}
+@media only screen and (max-width: 745px) and (min-width: 534px) {
+  /* line 57, ../sass/partials/components/_footer.scss */
+  .footer .footer-container {
+    max-width: 316px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* line 12, D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/susy-2.2.12/sass/susy/output/support/_clearfix.scss */
+  .footer .footer-container:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+}
+@media only screen and (max-width: 533px) {
+  /* line 57, ../sass/partials/components/_footer.scss */
+  .footer .footer-container {
+    max-width: 232px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* line 12, D:/Program Files/Ruby200-x64/lib/ruby/gems/2.0.0/gems/susy-2.2.12/sass/susy/output/support/_clearfix.scss */
+  .footer .footer-container:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+}
+/* line 60, ../sass/partials/components/_footer.scss */
+.footer .footer-container .copyright {
+  padding: 15px 0;
+}
